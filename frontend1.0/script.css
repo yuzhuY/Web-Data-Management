@@ -1,0 +1,66 @@
+body{
+	background-color: #FFFFFF;
+	color: black;
+}
+
+#option{
+	padding-left: 228px;
+
+	width: 180px;
+	background-color: #99FF66;
+	float:left;
+}
+
+ul.menu{
+	display:none;
+	list-style-type: none;
+	margin-top: 0;
+	padding:0;  
+	color: green;
+}
+
+a.menu li{
+	front:12px arial, helvetica, sans-serif;
+	padding-left:10px;
+}
+
+a.menuLink, li a{
+	text-decoration: none;
+	color:green;
+}
+
+a.menuLink{
+	front-size:16px;
+	front-weight:bold;
+}
+
+li a:hover {
+	background-color: #060;
+	color:white;
+}
+div#form{
+	width:300px;
+	margin-left: 460px;
+	margin-top: 90px;
+	position: absolute;
+}
+
+#copyright{
+	text-align: bottom;
+	padding-top: 600px;
+	padding-left:440px ;
+	color: #888888;
+}
+#header{
+	background-color: #99FF66;
+	color: white;
+	text-align: center;
+	padding:10px;
+
+}
+
+
+
+
+
+

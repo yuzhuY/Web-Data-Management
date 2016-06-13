@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Movie search</title>
+	<link rel="stylesheet" href="script.css" />
+	<script type="text/javascript" src="script.js"></script>
+
+</head>
+<body>
+	<div id="header">
+		<h1>Movie Search</h1>
+	</div>
+	<div id="option">
+
+		<a href="frontpage.html" class="menuLink">Front Page</a>
+		<ul class="menu" id="frontpage"><!--why id should be the same as href-->
+			<li><a id="introduction" href="introduction.html">Introduction</a></li>
+			<li><a id="function" href="function.html">Function</a></li>
+		</ul>
+	</div>
+	<div id="option">
+		<a href="news.html" class="menuLink">News</a>
+		<ul class="menu" id="news">
+			<li><a id="Hollywood" href="Hollywood.html">Hollywood</a></li>
+			<li><a id="Europe" href="Europe.html">Europe</a></li>
+			<li><a id="Asia" href="Asia.html">Asia</a></li>
+			<li><a id="Others" href="Others.html">Others</a></li>
+		</ul>
+	</div>
+	<div id="option">
+		<a href="aboutus.html" class="menuLink">About Us</a>
+		<ul class="menu" id="aboutus">
+			<li><a id="Whoarewe" href="whoarewe.html">Who are we</a></li>
+			<li><a id="Contactus" href="contactus.html">Contact Us</a></li>
+		</ul>
+	</div>
+
+	<div id="form">
+		<form method="post" action="#" onsubmit="alert('no checking out'); return false">
+		<fieldset>
+		<legend>Detailed movie information</legend>
+		<input type="text" name="si1" id="movieid" value="">Movie ID<br>
+		<input type="text" name="si1" id="title" value="">Title<br>
+		</fieldset>
+		<fieldset>
+		<legend>Detailed actor information</legend>
+		<input type="text" name="si2" id="actorid" value="">Movie ID<br>
+		<input type="text" name="si2" id="firstname" value="">First Name<br>
+		<input type="text" name="si2" id="lastname" value="">Last Name<br>
+		</fieldset>
+		<fieldset>
+		<legend>Short actor statistics</legend>
+		<input type="text" name="si3" id="actorid" value="">Movie ID<br>
+		<input type="text" name="si3" id="firstname" value="">First Name<br>
+		<input type="text" name="si3" id="lastname" value="">Last Name<br>
+		</fieldset>
+		<fieldset>
+		<legend>Genre exploration</legend>
+		<input type="text" name="si4" id="genrelabel" value="">Genre label<br>
+		<input type="text" name="si4" id="year" value="">Year<br>
+		<input type="text" name="si4" id="endyear" value="">End Year<br>
+		</fieldset>
+		<fieldset>
+		<legend>Genre statistics</legend>
+			<select id="state" name="state" onchange="select_state()">
+				<option disabled selected>select a range</option><!--hints-->
+				<option value="aa">Coming soon</option>
+				<option value="bb">2010-2016</option>
+				<option value="cc">2005-2010</option>
+				<option value="dd">2000-2005</option>
+				<option value="ee">1995-2000</option>
+				<option value="ff">1990-1995</option>
+				<option value="gg">1985-1990</option>
+				<option value="hh">1980-1985</option>
+				<option value="ii">1975-1980</option>
+				<option value="jj">1950-1980</option>
+				<option value="kk">Early than 1950</option>
+			</select>
+		</fieldset>
+		<fieldset>
+		<input type="submit" value="Search for me!">
+		</fieldset>
+	</div>
+	<div id="copyright">
+		Copyright &copy; 2016 TU Delft - Web Data Management
+	</div>
+
+
+
+
+
+
+
+</body>
+</html>

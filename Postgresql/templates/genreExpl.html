@@ -1,0 +1,68 @@
++<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Movie search</title>
+	<link rel="stylesheet" href="{{static_url("search.css")}}" />
+	<script type="text/javascript" src="{{static_url("search.js")}}"></script>
+
+</head>
+<body>
+	<div id="header">
+		<h1>MOVIE SEARCH</h1>
+	</div>
+	<div id="option-wrapper">
+	<div id="option">
+
+		<a href="frontpage.html" class="menuLink">Front Page</a>
+		<ul class="menu" id="frontpage"><!--why id should be the same as href-->
+			<li><a id="introduction" href="introduction.html">Introduction</a></li>
+			<li><a id="function" href="function.html">Function</a></li>
+		</ul>
+	</div>
+	<div id="option">
+		<a href="news.html" class="menuLink">News</a>
+		<ul class="menu" id="news">
+			<li><a id="Hollywood" href="Hollywood.html">Hollywood</a></li>
+			<li><a id="Europe" href="Europe.html">Europe</a></li>
+			<li><a id="Asia" href="Asia.html">Asia</a></li>
+			<!-- <li><a id="Others" href="Others.html">Others</a></li> -->
+		</ul>
+	</div>
+	<div id="option">
+		<a href="aboutus.html" class="menuLink">About Us</a>
+		<ul class="menu" id="aboutus">
+			<li><a id="Whoarewe" href="whoarewe.html">Who are we</a></li>
+			<li><a id="Contactus" href="contactus.html">Contact Us</a></li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+	<div id="form">
+		<fieldset>
+		<legend>Genre exploration</legend>
+		{% for movieInfo in moviesList %}
+		<p>
+			Movie ID: {{movieInfo[0]}} <br>
+			Title: {{movieInfo[1]}} <br>
+			Year: {{movieInfo[2]}} <br>
+		</p>
+		{% end %}
+		</fieldset>
+		</form>
+	</div>
+	<div id="copyright">
+			Copyright &copy; 2016 TU Delft - Web Data Management - G12
+	</div>
+
+</body>
+</html>

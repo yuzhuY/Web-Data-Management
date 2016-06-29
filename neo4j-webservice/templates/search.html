@@ -1,0 +1,156 @@
++<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Movie search</title>
+	<link rel="stylesheet" href="{{static_url("search.css")}}" />
+	<script type="text/javascript" src="{{static_url("search.js")}}"></script>
+
+</head>
+<body>
+	<div id="header">
+		<h1>MOVIE SEARCH</h1>
+	</div>
+	<div id="option-wrapper">
+	<div id="option1">
+		<a href="frontpage.html" class="menuLink">Home</a>
+		<ul class="menu" id="frontpage"><!--why id should be the same as href-->
+			<li><a id="introduction" href="introduction.html">Introduction</a></li>
+			<li><a id="function" href="function.html">Function</a></li>
+		</ul>
+	</div>
+	<div id="option2">
+		<a href="news.html" class="menuLink">News</a>
+		<ul class="menu" id="news">
+			<li><a id="Hollywood" href="Hollywood.html">Hollywood</a></li>
+			<li><a id="Europe" href="Europe.html">Europe</a></li>
+			<li><a id="Asia" href="Asia.html">Asia</a></li>
+			<!-- <li><a id="Others" href="Others.html">Others</a></li> -->
+		</ul>
+	</div>
+	<div id="option3">
+		<a href="aboutus.html" class="menuLink">About Us</a>
+		<ul class="menu" id="aboutus">
+			<li><a id="Whoarewe" href="whoarewe.html">Who are we</a></li>
+			<li><a id="Contactus" href="contactus.html">Contact Us</a></li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+	<div id="form">
+		<form method="get" action="/movie" >
+		<fieldset>
+		<legend>Detailed movie information</legend>
+		<input type="text" name="movieId" id="movieId" value="">	Movie ID<br>
+		<input type="text" name="title" id="title" value="">	Title<br>
+<!-- 		<td>
+			<select id="mode" name="mode" onchange="select_state()">
+				<option value="true">Accurate</option>
+				<option value="false">Fuzzy</option>
+			</select>
+		<td>Search mode</td>
+		</td> -->
+		<input type="submit" value="Search for me!">
+		</fieldset>
+		</form>
+		<form method="get" action="/actorDetail" >
+		<fieldset>
+		<legend>Detailed actor information</legend>
+		<input type="text" name="actorId" id="actorId" value="">	Actor ID<br>
+		<input type="text" name="fname" id="fname" value="">	First Name<br>
+		<input type="text" name="lname" id="lname" value="">	Last Name<br>
+<!-- 		<td>
+			<select id="mode" name="mode" onchange="select_state()">
+				<option value="true">Accurate</option>
+				<option value="false">Fuzzy</option>
+			</select>
+		<td>Search mode</td>
+		</td> -->
+		<input type="submit" value="Search for me!">
+		</fieldset>
+		</form>
+		<form method="get" action="/actorBrief" >
+		<fieldset>
+		<legend>Short actor statistics</legend>
+		<input type="text" name="actorId" id="actorId" value="">	Actor ID<br>
+		<input type="text" name="fname" id="fname" value="">	First Name<br>
+		<input type="text" name="lname" id="lname" value="">	Last Name<br>
+<!-- 		<td>
+			<select id="mode" name="mode" onchange="select_state()">
+				<option value="true">Accurate</option>
+				<option value="false">Fuzzy</option>
+			</select>
+		<td>Search mode</td>
+		</td> -->
+		<input type="submit" value="Search for me!">
+		</fieldset>
+		</form>
+		<form method="get" action="/genreExpl" >
+		<fieldset>
+		<legend>Genre exploration</legend>
+		<td>
+			<select id="genre" name="genre" onchange="select_state()">
+				<option value="－"></option>
+				<option value="Action">Action</option>
+				<option value="Adult">Adult</option>
+				<option value="Adventure">Adventure</option>
+				<option value="Animation">Animation</option>
+				<option value="Biography">Biography</option>
+				<option value="Comedy">Comedy</option>
+				<option value="Commercial">Commercial</option>
+				<option value="Crime">Crime</option>
+				<option value="Documentary">Documentrary</option>
+				<option value="Drama">Drama</option>
+				<option value="Erotica">Erotica</option>
+				<option value="Experimental">Experimental</option>
+				<option value="Family">Family</option>
+				<option value="Fantasy">Fantasy</option>
+				<option value="Film">Film</option>
+				<option value="Game">Game</option>
+				<option value="History">History</option>
+				<option value="Horror">Horror</option>
+				<option value="Lifestyle">Lifestyle</option>
+				<option value="Music">Music</option>
+				<option value="Musical">Musical</option>
+				<option value="Mystery">Mystery</option>
+				<option value="News">News</option>
+				<option value="Romance">Romance</option>
+				<option value="Reality">Reality</option>
+				<option value="Sci">Sci</option>
+				<option value="Short">Short</option>
+				<option value="Sport">Sport</option>
+				<option value="Talk">Talk</option>
+				<option value="Thriller">Thriller</option>
+				<option value="War">War</option>
+				<option value="Western">Western</option>
+			</select>
+		<td>Genre selection</td><br>
+		</td>
+		<input type="text" name="year" id="year" value="">	Year<br>
+		<input type="text" name="endYear" id="endYear" value="">	End Year<br>
+		<input type="submit" value="Search for me!">
+		</fieldset>
+		</form>
+		<form method="get" action="/genreStat" >
+		<fieldset>
+		<legend>Genre statistics</legend>
+		<input type="text" name="year" id="year" value="">	Year<br>
+		<input type="text" name="endYear" id="endYear" value="">	End Year<br>
+		<input type="submit" value="Search for me!">
+		</fieldset>
+	</div>
+	<div id="copyright">
+			Copyright &copy; 2016 TU Delft - Web Data Management - G12
+	</div>
+
+</body>
+</html>

@@ -1,4 +1,5 @@
 # Web-Data-Management
+##Group 12
 This repository is a project for course Web Data Management(IN4331, Delft University of Technology). 
 
 

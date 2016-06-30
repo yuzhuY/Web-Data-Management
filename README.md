@@ -11,10 +11,13 @@ Three backends are implemented in this project, they are: relational backend Pos
 The contributors for this repository are:
 
 
-Yuchen Huang 4511980
+Yuchen Huang 4511980  oser.huang@gmail.com
 
-Yujing Gong 4471458
+Yujing Gong 4471458  yjgong929@gmail.com
 
-Lina He 4519051
+Lina He 4519051  linahe93@gmail.com
 
-Yuzhu Yan 4468023
+Yuzhu Yan 4468023  yuzhuyanbamboo@gmail.com
+
+
+If you have any questions, please do not hesitate to contact with any of us!

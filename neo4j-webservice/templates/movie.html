@@ -1,0 +1,119 @@
++<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Movie search</title>
+	<link rel="stylesheet" href="{{static_url("search.css")}}" />
+	<script type="text/javascript" src="{{static_url("search.js")}}"></script>
+
+</head>
+<body>
+	<div id="header">
+		<h1>MOVIE SEARCH</h1>
+	</div>
+	<div id="option-wrapper">
+	<div id="option1">
+
+		<a href="frontpage.html" class="menuLink">Home</a>
+		<ul class="menu" id="frontpage"><!--why id should be the same as href-->
+			<li><a id="introduction" href="introduction.html">Introduction</a></li>
+			<li><a id="function" href="function.html">Function</a></li>
+		</ul>
+	</div>
+	<div id="option2">
+		<a href="news.html" class="menuLink">News</a>
+		<ul class="menu" id="news">
+			<li><a id="Hollywood" href="Hollywood.html">Hollywood</a></li>
+			<li><a id="Europe" href="Europe.html">Europe</a></li>
+			<li><a id="Asia" href="Asia.html">Asia</a></li>
+			<!-- <li><a id="Others" href="Others.html">Others</a></li> -->
+		</ul>
+	</div>
+	<div id="option3">
+		<a href="aboutus.html" class="menuLink">About Us</a>
+		<ul class="menu" id="aboutus">
+			<li><a id="Whoarewe" href="whoarewe.html">Who are we</a></li>
+			<li><a id="Contactus" href="contactus.html">Contact Us</a></li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+	<div id="form">
+		<fieldset>
+		<legend></legend>
+		<div align=center><font size=5><B>Detailed movie information</B></font></div>
+		{% if not moviesList%}
+			<br /><br />
+			<div align=center>No result. Try agian.</div>
+		{% end %}
+		<br />
+		{% for movieInfoList in moviesList %}
+		<p>
+
+			<B>Movie ID:</B> {{movieInfoList[0]}} <br />
+			<B>Title:</B> {{movieInfoList[1]}} <br />
+			<B>Year:</B> {{movieInfoList[2]}} <br />
+			<B>Genre:</B>
+			{% if movieInfoList[5] and movieInfoList[5] != 0 and movieInfoList[5] != 90%}
+				{% for i, genre in enumerate(movieInfoList[5]) %}
+					{% if i != len(movieInfoList[5]) - 1 %}
+						{{genre}},&nbsp
+					{% else %}
+						{{genre}}
+					{% end %}
+				{% end %}
+			{% elif movieInfoList[5] == 90%}
+				Not searched yet.
+			{% else %}
+				None
+			{% end %}
+			<br />
+			<B>Keywords:</B>
+			{% if movieInfoList[6] and movieInfoList[6] != 1 and movieInfoList[6] != 91%}
+				{% for i, keywords in enumerate(movieInfoList[6]) %}
+					{% if i != len(movieInfoList[6]) - 1 %}
+						{{keywords}},&nbsp
+					{% else %}
+						{{keywords}}
+					{% end %}
+				{% end %}
+			{% elif movieInfoList[6] == 91%}
+				Not searched yet
+			{% else %}
+				None
+			{% end %}
+			<br>
+			<B>Actors--Characters:</B>
+			{% if movieInfoList[3] and movieInfoList[3] != 2 and movieInfoList[3] != 92%}
+				{% for i, actors in enumerate(movieInfoList[3]) %}
+					{% if i != len(movieInfoList[3]) - 1 %}
+						{{actors}},&nbsp
+					{% else %}
+						{{actors}}
+					{% end %}
+				{% end %}
+			{% elif movieInfoList[3] == 92%}
+				Not searched yet
+			{% else %}
+				None
+			{% end %}
+			<br>
+		</p>
+		{% end %}
+		</fieldset>
+	</div>
+	<div id="copyright">
+		Copyright &copy; 2016 TU Delft - Web Data Management - G12
+	</div>
+
+</body>
+</html>

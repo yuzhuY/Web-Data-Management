@@ -1,0 +1,103 @@
++<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Movie search</title>
+	<link rel="stylesheet" href="{{static_url("search.css")}}" />
+	<script type="text/javascript" src="{{static_url("search.js")}}"></script>
+
+</head>
+<body>
+	<div id="header">
+		<h1>MOVIE SEARCH</h1>
+	</div>
+	<div id="option-wrapper">
+	<div id="option1">
+
+		<a href="frontpage.html" class="menuLink">Home</a>
+		<ul class="menu" id="frontpage"><!--why id should be the same as href-->
+			<li><a id="introduction" href="introduction.html">Introduction</a></li>
+			<li><a id="function" href="function.html">Function</a></li>
+		</ul>
+	</div>
+	<div id="option2">
+		<a href="news.html" class="menuLink">News</a>
+		<ul class="menu" id="news">
+			<li><a id="Hollywood" href="Hollywood.html">Hollywood</a></li>
+			<li><a id="Europe" href="Europe.html">Europe</a></li>
+			<li><a id="Asia" href="Asia.html">Asia</a></li>
+			<!-- <li><a id="Others" href="Others.html">Others</a></li> -->
+		</ul>
+	</div>
+	<div id="option3">
+		<a href="aboutus.html" class="menuLink">About Us</a>
+		<ul class="menu" id="aboutus">
+			<li><a id="Whoarewe" href="whoarewe.html">Who are we</a></li>
+			<li><a id="Contactus" href="contactus.html">Contact Us</a></li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+
+
+
+	<div id="form">
+		<fieldset>
+		<legend></legend>
+		<div align=center><font size=5><B>Detailed movie information</B></font></div>
+		{% if not actorsList%}
+			<br /><br />
+			<div align=center>No result. Try agian.</div>
+		{% end %}
+		<br />
+		{% for i, actorInfo in enumerate(actorsList) %}
+		<p>
+
+			{% if i == 0%}
+				<div align=center >
+				<B>==================</B> <br />
+				<font size=4><B>Genre:</B> {{actorInfo[2]}}</font> <br />
+				<B>==================</B> <br /><br />
+				</div>
+			{% end %}
+			<B>Year:</B> {{actorInfo[3]}} <br />
+			<B>Movies:</B>
+			{% if actorInfo[1] %}
+				{% for i, genre in enumerate(actorInfo[1]) %}
+					{% if i != len(actorInfo[1]) - 1 %}
+						{{genre}},&nbsp
+					{% else %}
+						{{genre}}
+					{% end %}
+				{% end %}
+			{% else %}
+				None
+			{% end %}
+			<br />
+			<B>Actors:</B>
+			{% if actorInfo[0] %}
+				{% for i, genre in enumerate(actorInfo[0]) %}
+					{% if i != len(actorInfo[0]) - 1 %}
+						{{genre}},&nbsp
+					{% else %}
+						{{genre}}
+					{% end %}
+				{% end %}
+			{% else %}
+				None
+			{% end %}
+			<br />
+		</p>
+		{% end %}
+		</fieldset>
+	</div>
+
+
+
+
+
+</body>
+</html>
